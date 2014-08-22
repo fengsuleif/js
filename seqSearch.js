@@ -19,3 +19,24 @@ function seqSearch_index(arr,item){
 	}
 		return -1;
 }
+
+function  swap(arr,i,j){
+	temp=arr[i];
+	arr[i]=arr[j];
+	arr[j]=temp;
+
+}
+
+//改进的顺序排序方法，把查找的值前提一个位置
+function seqSearch_adv(arr, data) {
+   for (var i = 0; i < arr.length; ++i) {
+      if (arr[i] == data) {
+         if (i > 0) {
+            swap(arr,i,i-1);
+         }
+         return true;
+      }
+  }
+  return false;
+}
+
