@@ -6,7 +6,9 @@ function findMin(arr){
 		min=arr[i];
 		}
 	return min;
+	}
 }
+
 
 function findMax(arr){
 	var max=arr[0];
@@ -15,4 +17,5 @@ function findMax(arr){
 		max=arr[i];
 		}
 	return max;
+	}
 }
