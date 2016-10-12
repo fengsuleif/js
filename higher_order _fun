@@ -1,3 +1,42 @@
+//闭包
+var func = function(){
+    var a = 1;
+    return function(){
+        a++;
+        alert ( a );
+    }
+};
+
+var f = func();
+
+f();    // 输出：2
+f();    // 输出：3
+f();    // 输出：4
+f();    // 输出：5
+
+
+/**
+this的指向大致可以分为以下4种。
+
+作为对象的方法调用。
+
+作为普通函数调用。
+
+构造器调用。
+
+Function.prototype.call或Function.prototype.apply调用。
+**/
+
+//call apply
+
+var func = function( a, b, c ){
+    alert ( [ a, b, c ] );    // 输出 [ 1, 2, 3 ]
+};
+
+func.apply( null, [ 1, 2, 3 ] );
+func.call( null, 1, 2, 3 );
+
+
 //执行ajax后根据返回值调用callback，这里callback是作为参数放到函数里的
 //函数作为参数传递
 var getUserInfo = function( userId, callback ){
